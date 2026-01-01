@@ -24,7 +24,7 @@
 
 한국에 거주하는 외국인을 위한 멀티에이전트 기반 의료 상담 시스템.
 
-RAG 기반 Agent로 의료 정보를 제공하고, 질병 예측 Agent를 통해 간단한 소견서 자동 생성.
+RAG 기반 Agent로 의료 정보를 제공해주는 Agent.
 
 문화적 맥락 이해를 위해 GraphDB를 활용한 의미 조정 레이어 포함.
 
@@ -42,7 +42,6 @@ RAG 기반 Agent로 의료 정보를 제공하고, 질병 예측 Agent를 통해
 
 - 자국어로 의료 정보를 안전하게 이해
 - 문화적 배경에 맞는 상담 경험
-- 병원 방문 전 예측 정보를 기반으로 진료 준비
 
 ### Non-goals
 
@@ -62,6 +61,4 @@ RAG 기반 Agent로 의료 정보를 제공하고, 질병 예측 Agent를 통해
 - **LangChain + LangGraph**: 멀티에이전트 흐름 관리
 - **Qdrant (VectorDB)**: 의료 정보 RAG 검색
 - **GraphDB (Neo4j)**: 문화적 맥락 및 증상 표현 연결 구조
-- **ML 질병 예측 모델**: LightGBM or LSTM
-- **소견서 생성**: LLM - 프롬프트 + Structured Output Template
 - **보안/개인정보 보호**: 익명화 + 민감정보 마스킹

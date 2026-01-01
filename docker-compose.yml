@@ -10,20 +10,8 @@ services:
     ports:
       - "8000:8000"
     depends_on:
-      - postgres
       - neo4j
       - qdrant
-
-  postgres:
-    image: postgres:17
-    environment:
-      POSTGRES_DB: ${POSTGRES_DB}
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-    ports:
-      - "5432:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
 
   neo4j:
     image: neo4j:2025.11.2
@@ -44,7 +32,6 @@ services:
       - qdrant_data:/qdrant/storage
 
 volumes:
-  postgres_data:
   neo4j_data:
   neo4j_logs:
   qdrant_data:
