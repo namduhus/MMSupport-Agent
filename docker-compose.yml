@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   api:
     build:
@@ -12,6 +10,17 @@ services:
     depends_on:
       - neo4j
       - qdrant
+
+  ui:
+    build:
+      context: .
+      dockerfile: ui/Dockerfile
+    ports:
+      - "8501:8501"
+    environment:
+      API_URL: http://api:8000
+    depends_on:
+      - api
 
   neo4j:
     image: neo4j:2025.11.2

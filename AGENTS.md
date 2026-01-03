@@ -4,7 +4,7 @@
 
 ## 기술스택
 - Python 3.12
-- Agent: LangChain V1.0 + LangGraph V1.0
+- Agent: LangChain V1.0
 - GraphDB: Neo4j
 - VectorDB: QdrantDB
 - BackEnd: FastAPI
@@ -36,7 +36,7 @@
   - 사용자 메타 정보 (국적, 연령, 선호 언어 등)
 - **출력**:
   - 추천 진료과
-  - 진료 절차 및 비용 정보
+  - 증상 설명
 - **내부 플로우**:
   1. 다국어 입력 → 한국어 또는 내부 표준 언어로 번역
   2. 입력을 Vector로 변환
@@ -47,13 +47,6 @@
 - **의존 리소스**:
   - Qdrant (VectorDB)
   - GraphDB (문화적 컨텍스트용)
-  - LangChain / LangGraph
+  - LangChain
 
----
-
-## 🔀 Agent Orchestration (LangGraph 기반 흐름)
-- 사용자 입력 →
-  - RAGAgent → 질의 정보 안내  
-- 필요 시 GraphDB 기반 의미 조정 수행
-- LangGraph가 각 Agent 호출 순서를 결정하고 상태 유지
 ---

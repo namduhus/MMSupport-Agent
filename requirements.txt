@@ -1,6 +1,13 @@
 fastapi
 uvicorn[standard]
 langchain==1.0.0
-langgraph==1.0.0
 neo4j
-qdrant-client
+qdrant-client==1.10.0
+sentence-transformers
+pypdf
+python-dotenv
+einops
+requests
+streamlit
+langchain_community
+langchain-ollama
