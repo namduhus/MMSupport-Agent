@@ -55,25 +55,6 @@ Place medical-related PDF documents in a folder and set `PDF_DIR` to that path.
 python apps/scripts/pdf_to_qdrant.py
 ```
 
-## API
-POST `/rag`
-Request JSON:
-```
-{
-  "user_query": "감기 증상인데 어떻게 진료받아요?",
-  "user_nationality": "KR",
-  "user_age": 30,
-  "preferred_language": "한국어"
-}
-```
-
-Response JSON:
-```
-{
-  "answer": "..."
-}
-```
-
 ## Notes
 - Qdrant is accessed by the API container via `http://qdrant:6333`.
 - Ollama runs on the host. Use `host.docker.internal` from inside containers.
